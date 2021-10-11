@@ -19,15 +19,13 @@ void Clear(container &c) {
     c.len = 0;
 }
 
-//------------------------------------------------------------------------------
-// Ввод содержимого контейнера из указанного потока
 void In(container &c, std::ifstream &ifst) {
     while (!ifst.eof()) {
         c.cont[c.len] = In(ifst);
         ++c.len;
     }
 }
-// kek
+
 void InRnd(container &c, int size) {
     while (c.len < size) {
         c.cont[c.len] = InRnd();
