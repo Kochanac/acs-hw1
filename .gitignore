@@ -1,0 +1,7 @@
+CMakeFiles/*
+cmake-build-debug/*
+.idea/*
+CMake*
+cmake*
+Makefile
+numbers
