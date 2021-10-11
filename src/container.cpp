@@ -45,9 +45,34 @@ void Out(container &c, std::ofstream &ofst) {
     }
 }
 
+void heapify(container &c, int n, int i)
+{
+    int largest = i;
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
+ 
+    if (l < n && RationalRepr(*c.cont[l]) > RationalRepr(*c.cont[largest]))
+        largest = l;
+ 
+    if (r < n && RationalRepr(*c.cont[r]) > RationalRepr(*c.cont[largest]))
+        largest = r;
+ 
+    if (largest != i) {
+        std::swap(c.cont[i], c.cont[largest]);
+ 
+        heapify(c, n, largest);
+    }
+}
 
-//------------------------------------------------------------------------------
-// Сортировка контейнера по возрастанию с помощью прямого включения
-void Sort(container &c) {
-	// TODO: написать сортировку
+// Heap sort
+void Sort(container &c)
+{
+    for (int i = c.len / 2 - 1; i >= 0; i--)
+        heapify(c, c.len, i);
+ 
+    for (int i = c.len - 1; i > 0; i--) {
+        std::swap(c.cont[0], c.cont[i]);
+ 
+        heapify(c, i, 0);
+    }
 }

@@ -10,7 +10,7 @@ void InRnd(complex &num) {
 }
 
 void Out(complex &t, std::ofstream &out) {
-    out << t.a << " + " << t.b << "i ";
+    out << t.a << (t.b >= 0 ? " + " : " - ") << abs(t.b) << "i ";
 }
 
 double RationalRepr(complex &t) {

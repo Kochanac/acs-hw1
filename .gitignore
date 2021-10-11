@@ -5,3 +5,4 @@ CMake*
 cmake*
 Makefile
 numbers
+build/
