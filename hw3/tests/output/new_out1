@@ -1,0 +1,6 @@
+ZeroDivisionError()
+Array contains 3 elements.
+0: 10.0 - 10.0i 1: 10.0 + 10.0i 2: 1 / 2 
+Sorted array:
+Array contains 3 elements.
+0: 1 / 2 1: 10.0 + 10.0i 2: 10.0 - 10.0i 

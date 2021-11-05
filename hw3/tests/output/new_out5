@@ -1,0 +1,6 @@
+TypeError("__init__() missing 1 required positional argument: 'b'")
+Array contains 2 elements.
+0: (10.0; 23.0) 1: (56.0; 76.0) 
+Sorted array:
+Array contains 2 elements.
+0: (10.0; 23.0) 1: (56.0; 76.0) 
